@@ -18,7 +18,7 @@ const InputContainer = styled.label`
 
   @media (min-width: 767px) {
     margin-bottom: 0;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 `;
 
