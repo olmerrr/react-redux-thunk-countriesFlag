@@ -9,6 +9,7 @@ import {useEffect} from "react";
 import {selectCountriesInfo, selectVisibleCountries} from "../store/countries/countries-selectors";
 import {loadCountries} from "../store/countries/countries-actions";
 import {selectControls, selectSearch} from "../store/controls/controls-selectors";
+import {Loader} from "../components/Loader/Loader";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export const HomePage = () => {
     <>
       <Controls />
       {error && <h3>Can't fetch data...</h3>}
-      {status === "loading" && <h3>Loading..</h3>}
+      {status === "loading" && <Loader/>}
       {status === "received" && (
         <List>
           {countries.map((c) => {
